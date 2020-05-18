@@ -24,7 +24,8 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
-		launch(args);
 		MainController mc = new MainController();
+		launch(args);
+		
 	}
 }
