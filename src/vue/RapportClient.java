@@ -25,10 +25,10 @@ public class RapportClient {
 			client = bd.arrLstClientRegulier.get(i).nom + " | nb location : " + bd.arrLstClientRegulier.get(i).getNombreDeLocation();
 			client += " | adresse : " + bd.arrLstClientRegulier.get(i).getAdresse();
 			client += " | telephone : " + bd.arrLstClientRegulier.get(i).getTel();
-			client += " | bons points : " + bd.arrLstClientRegulier.get(i).pointsBonClient;
+			client += " | bons points : " + bd.arrLstClientRegulier.get(i).getPointsBonClient();
 			listeClients += client + "\n";
 		}	
-		System.out.println("Rapport des clients : " + listeClients);
+		System.out.println("Rapport des clients :\n" + listeClients);
 	
 		
 	}
