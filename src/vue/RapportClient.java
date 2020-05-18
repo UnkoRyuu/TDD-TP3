@@ -9,5 +9,6 @@ package vue;
 public class RapportClient {
 	public RapportClient() {
 		System.out.println("RapportClient.");
+		
 	}
 }
