@@ -23,6 +23,14 @@ public class ClientRegulier extends Client {
 		
 	}
 	
+	public int getPointsBonClient() {
+		return pointsBonClient;
+	}
+
+	public void setPointsBonClient(int pointsBonClient) {
+		this.pointsBonClient = pointsBonClient;
+	}
+
 	public void addPoints(int value) {
 		this.pointsBonClient += value;
 	}
