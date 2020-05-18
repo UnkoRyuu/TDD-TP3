@@ -1,5 +1,6 @@
 package vue;
 import donnees.BD;
+import javafx.scene.control.Button;
 /**
  * 
  * Rapport de la liste des clients.
@@ -29,7 +30,5 @@ public class RapportClient {
 			listeClients += client + "\n";
 		}	
 		System.out.println("Rapport des clients :\n" + listeClients);
-	
-		
 	}
 }

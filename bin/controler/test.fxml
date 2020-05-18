@@ -26,32 +26,32 @@
         <items>
           <AnchorPane blendMode="SRC_ATOP" minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="482.0">
                <children>
-                  <Button layoutX="41.0" layoutY="48.0" mnemonicParsing="false" text="Rapport client" />
-                  <Button layoutX="37.0" layoutY="124.0" mnemonicParsing="false" text="Rapport Voiture" />
-                  <Button layoutX="33.0" layoutY="197.0" mnemonicParsing="false" text="Rapport Location" />
+                  <Button layoutX="41.0" layoutY="48.0" mnemonicParsing="false" text="Rapport client" id="rapportclient" />
+                  <Button layoutX="37.0" layoutY="124.0" mnemonicParsing="false" text="Rapport Voiture" id="rapportvoiture"/>
+                  <Button layoutX="33.0" layoutY="197.0" mnemonicParsing="false" text="Rapport Location" id="rapportlocation"/>
                   <AnchorPane layoutX="154.0" prefHeight="299.0" prefWidth="446.0" style="-fx-background-color: #5a1aa3;">
                      <children>
-                        <TableView layoutX="-2.0" prefHeight="299.0" prefWidth="446.0">
+                        <TableView layoutX="-2.0" prefHeight="299.0" prefWidth="446.0" id="tableau_voitures">
                           <columns>
-                            <TableColumn prefWidth="148.0" text="C1" />
-                            <TableColumn minWidth="0.0" prefWidth="148.0" text="C2" />
-                              <TableColumn minWidth="0.0" prefWidth="148.0" text="C3" />
+                            <TableColumn prefWidth="148.0" text="Marque" id="marque" />
+                            <TableColumn minWidth="0.0" prefWidth="148.0" text="Modèle" id="modele" />
+                              <TableColumn minWidth="0.0" prefWidth="148.0" text="Année" id="modele"/>
                           </columns>
                         </TableView>
-                        <TableView prefHeight="299.0" prefWidth="446.0">
+                        <TableView prefHeight="299.0" prefWidth="446.0" id="tableau_clients">
                           <columns>
-                            <TableColumn prefWidth="89.2" text="C1" />
-                            <TableColumn prefWidth="89.2" text="C2" />
-                              <TableColumn prefWidth="89.2" text="C3" />
-                              <TableColumn prefWidth="89.2" text="C4" />
-                              <TableColumn prefWidth="75.0" text="C5" />
+                            <TableColumn prefWidth="89.2" text="Nom" id="nom" />
+                            <TableColumn prefWidth="89.2" text="Adresse" id="adresse" />
+                              <TableColumn prefWidth="89.2" text="Telephone" id="tel" />
+                              <TableColumn prefWidth="89.2" text="Location(s)" id="location" />
+                              <TableColumn prefWidth="75.0" text="bons points" id="bonpts" />
                           </columns>
                         </TableView>
-                        <TableView prefHeight="299.0" prefWidth="446.0">
+                        <TableView prefHeight="299.0" prefWidth="446.0" id="tableau_location">
                           <columns>
-                            <TableColumn prefWidth="148.0" text="C1" />
-                            <TableColumn prefWidth="148.0" text="C2" />
-                              <TableColumn prefWidth="148.0" text="C3" />
+                            <TableColumn prefWidth="148.0" text="Client" id="client_location"/>
+                            <TableColumn prefWidth="148.0" text="Voiture" id="voiture_location"/>
+                              <TableColumn prefWidth="148.0" text="Periode de location" id="prdlocation" />
                           </columns>
                         </TableView>
                      </children></AnchorPane>
