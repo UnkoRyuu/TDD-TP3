@@ -6,9 +6,9 @@ import donnees.BD;
  * Faire la liste des voitures de l'entreprise.
  *
  */
-public class RVoiture {
+public class RapportVoiture {
 	
-	public RVoiture() {
+	public RapportVoiture() {
 		
 		int i;
 		BD bd = new BD();
