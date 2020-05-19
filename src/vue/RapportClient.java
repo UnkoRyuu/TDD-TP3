@@ -10,6 +10,11 @@ import javafx.scene.control.Button;
  */
 public class RapportClient {
 	public RapportClient() {
+		
+		
+	}
+	
+	public void affichageRapportConsole() {
 		BD bd = new BD();
 		int i;
 		String listeClients="", client=""; 
@@ -31,4 +36,9 @@ public class RapportClient {
 		}	
 		System.out.println("Rapport des clients :\n" + listeClients);
 	}
+	
+	public void affichageRapportFXML() {
+		
+	}
 }
+

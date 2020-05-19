@@ -20,6 +20,7 @@ public class MainController{
 	public MainController() {
 		this.bd = new BD(); // mock bd, the program start with those data at each start
 		rClient = new RapportClient();
+		rClient.affichageRapportConsole();
 		rVoiture = new RapportVoiture();
 		}
 }
