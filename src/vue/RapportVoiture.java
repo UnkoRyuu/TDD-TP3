@@ -22,9 +22,9 @@ public class RapportVoiture {
 			voiture += "| Annee : " + bd.arrLstVoiture.get(i).getAnnee();	
 			listeVoitures += voiture + "\n";
 		}	
-		System.out.println("Rapport voitures: " + listeVoitures);
+		System.out.println("Rapport voitures : \n " + listeVoitures);
 	
 		
 	}
-}
+} 
 
