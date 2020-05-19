@@ -17,10 +17,10 @@ public class RapportVoiture {
 		
 		for (i=0; i<bd.arrLstVoiture.size(); i++) {
 			
-			voiture = bd.arrLstVoiture.get(i).getModele();
-			voiture += " Marque : " + bd.arrLstVoiture.get(i).getMarque();
-			voiture += " Annee : " + bd.arrLstVoiture.get(i).getAnnee();	
-			listeVoitures += voiture;
+			voiture = " Modele : " + bd.arrLstVoiture.get(i).getModele();
+			voiture += "| Marque : " + bd.arrLstVoiture.get(i).getMarque();
+			voiture += "| Annee : " + bd.arrLstVoiture.get(i).getAnnee();	
+			listeVoitures += voiture + "\n";
 		}	
 		System.out.println("Rapport voitures: " + listeVoitures);
 	
