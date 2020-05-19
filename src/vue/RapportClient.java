@@ -1,5 +1,6 @@
 package vue;
 import donnees.BD;
+import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 /**
  * 
@@ -10,8 +11,6 @@ import javafx.scene.control.Button;
  */
 public class RapportClient {
 	public RapportClient() {
-		
-		
 	}
 	
 	public void affichageRapportConsole() {
@@ -36,8 +35,9 @@ public class RapportClient {
 		}	
 		System.out.println("Rapport des clients :\n" + listeClients);
 	}
-	
-	public void affichageRapportFXML() {
+	@FXML
+	public void affichageRapportClientFXML() {
+		System.out.println("ça marche");
 		
 	}
 }
