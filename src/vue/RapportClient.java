@@ -1,7 +1,13 @@
 package vue;
 import donnees.BD;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.FlowPane;
+import modele.Client;
 /**
  * 
  * Rapport de la liste des clients.
@@ -37,7 +43,7 @@ public class RapportClient {
 	}
 	@FXML
 	public void affichageRapportClientFXML() {
-		System.out.println("ça marche");
+		
 		
 	}
 }
