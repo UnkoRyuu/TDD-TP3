@@ -24,7 +24,10 @@ public class RapportVoiture {
 		}	
 		System.out.println("Rapport voitures : \n " + listeVoitures);
 	
-		
+	}
+	
+	public void affichageRapportVoiture() {
+		System.out.println("ça marche");
 	}
 } 
 

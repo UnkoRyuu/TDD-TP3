@@ -20,7 +20,6 @@ public class MainController{
 	public MainController() {
 		this.bd = new BD(); // mock bd, the program start with those data at each start
 		rClient = new RapportClient();
-		
 		rVoiture = new RapportVoiture();
 		}
 	public void affichageClients() {
@@ -30,7 +29,8 @@ public class MainController{
 	}
 	
 	public void affichageVoitureEnConsole() {
-		System.out.println("coucou c'est moii");
+		rVoiture.affichageRapportVoiture();
+		System.out.println("coucou c'est moi");
 	}
 }
 		
