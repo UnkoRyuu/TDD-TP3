@@ -16,17 +16,17 @@ public class RapportLocationParClient {
 	
 	public RapportLocationParClient() {
 		
+	}
+		
+	public void afficherRapportLocationVoiture() {	
 		int i;
 		BD bd = new BD();
 		String location=""; 
 		String listeLocation="";
-		int bonPoints;
 		
 		for (i=0; i<bd.arrLstLocation.size(); i++) {
-			
-						
+									
 			location = " Client : " + bd.arrLstLocation.get(i).getClient().getNom();
-			location += "| Client Regulier : " + bd.arrLstLocation.get(i).getClientRegulier().getPointsBonClient();
 			location += "| Voiture : " + bd.arrLstLocation.get(i).getVoiture().getModele();	
 			location += "| Periode de location : " + bd.arrLstLocation.get(i).getpL().getDateDebut();
 			location += "| Periode de location : " + bd.arrLstLocation.get(i).getpL().getDateFin();
