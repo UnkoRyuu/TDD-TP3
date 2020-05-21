@@ -12,6 +12,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import modele.Client;
 import modele.ClientRegulier;
@@ -59,6 +60,18 @@ public class Main extends Application {
 					
 				}
 			});
+			
+			clients.setOnMousePressed(new EventHandler<MouseEvent>() {
+			    @Override 
+			    public void handle(MouseEvent event) {
+			        if (event.isPrimaryButtonDown() && event.getClickCount() == 2) {
+			            System.out.println(clients.getSelectionModel().getSelectedItem().nom);                   
+			        }
+			    }
+			});
+				
+			
+					
 			
 			Scene scene = new Scene(root,1400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
