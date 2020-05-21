@@ -39,7 +39,7 @@ public class MainController{
 	
 	public void affichageVoitureEnConsole() {
 		rVoiture.affichageRapportVoiture();
-		System.out.println("coucou c'est moi");
+		System.out.println(bd.arrLstVoiture);
 	}
 	@SuppressWarnings("unchecked")
 	public void afficheTableauClient( TableView<Client> clients, TableView<ClientRegulier> clientsReguliers) {
