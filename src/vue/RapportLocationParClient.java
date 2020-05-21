@@ -1,4 +1,7 @@
 package vue;
+
+import donnees.BD;
+
 /**
  * Rapport des locations par client.
  * 
@@ -11,6 +14,20 @@ package vue;
 public class RapportLocationParClient {
 	
 	public RapportLocationParClient() {
-		System.out.println("RapportLocationParClient.");
+		
+		int i;
+		BD bd = new BD();
+		String location=""; 
+		String listeLocation="";
+		
+		for (i=0; i<bd.arrLstLocation.size(); i++) {
+			
+			location = " Client : " + bd.arrLstLocation.get(i).getClient();
+			location += "| Client Regulier : " + bd.arrLstLocation.get(i).getClientRegulier();
+			location += "| Voiture : " + bd.arrLstLocation.get(i).getVoiture();	
+			location += "| Periode de location : " + bd.arrLstLocation.get(i).getpL();	
+			listeLocation += location + "\n";
+		}	
+		System.out.println("Rapport location par client : \n " + listeLocation);
 	}
 }
