@@ -27,7 +27,7 @@ public class RapportVoiture {
 	}
 	
 	public void affichageRapportVoiture() {
-		System.out.println("Liste voitures : ");
+		System.out.println("Liste voitures ok ");
 	}
 } 
 
