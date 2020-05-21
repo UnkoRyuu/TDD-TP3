@@ -24,15 +24,12 @@ public class RapportLocationParClient {
 		
 		for (i=0; i<bd.arrLstLocation.size(); i++) {
 			
-			if(bd.arrLstLocation.get(i).getClientRegulier().getPointsBonClient()==0) {
-				
-			}
-			
+						
 			location = " Client : " + bd.arrLstLocation.get(i).getClient().getNom();
 			location += "| Client Regulier : " + bd.arrLstLocation.get(i).getClientRegulier().getPointsBonClient();
 			location += "| Voiture : " + bd.arrLstLocation.get(i).getVoiture().getModele();	
-			location += "| Periode de location : " + bd.arrLstLocation.get(i).getpL().dateDebut;
-			location += "| Periode de location : " + bd.arrLstLocation.get(i).getpL().dateFin;
+			location += "| Periode de location : " + bd.arrLstLocation.get(i).getpL().getDateDebut();
+			location += "| Periode de location : " + bd.arrLstLocation.get(i).getpL().getDateFin();
 			listeLocation += location + "\n";
 		}	
 		System.out.println("Rapport location par client : \n " + listeLocation);

@@ -82,21 +82,21 @@ public class BD {
 		v4.setAnnee("2019");
 		this.arrLstVoiture.add(v4);
 		
-		PeriodeLocation pl1 = new PeriodeLocation();
-		pl1.dateDebut = "2020-04-01";
-		pl1.dateFin = "2020-04-03";
+		PeriodeLocation pl1 = new PeriodeLocation("2020-04-01","2020-04-03");
+		//pl1.dateDebut = "2020-04-01";
+		//pl1.dateFin = "2020-04-03";
 		
-		Location l1 = new Location(c1);
+		Location l1 = new Location(c1,v1,pl1);
 		l1.setClient(c1);
 		l1.setVoiture(v1);
 		l1.setpL(pl1);
 		this.arrLstLocation.add(l1);
 		
-		PeriodeLocation pl2 = new PeriodeLocation();
-		pl1.dateDebut = "2020-04-01";
-		pl1.dateFin = "2020-04-03";
+		PeriodeLocation pl2 = new PeriodeLocation("2020-04-01","2020-04-03");
+		pl1.setDateDebut("2020-04-01");
+		//pl1.dateFin = "2020-04-03";
 		
-		Location l2 = new Location(cr1);
+		Location l2 = new Location(cr1,v2,pl2);
 		l2.setClient(cr1);
 		l2.setVoiture(v2);
 		l2.setpL(pl2);

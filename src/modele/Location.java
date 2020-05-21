@@ -14,8 +14,15 @@ public class Location {
 	private Voiture voiture;
 	private PeriodeLocation pL;
 	
-	public Location(Client client, ClientRegulier clientRegulier, Voiture voiture, PeriodeLocation pL) {
+	public Location(Client client, Voiture voiture, PeriodeLocation pL) {
 		this.client = client;
+		this.clientRegulier = null;
+		this.voiture = voiture;
+		this.pL = pL;
+	}
+	
+	public Location(ClientRegulier clientRegulier, Voiture voiture, PeriodeLocation pL) {
+		this.client = null;
 		this.clientRegulier = clientRegulier;
 		this.voiture = voiture;
 		this.pL = pL;
