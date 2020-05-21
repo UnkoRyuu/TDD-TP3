@@ -41,6 +41,10 @@ public class MainController{
 		rVoiture.affichageRapportVoiture();
 	}
 	
+	public void afficherLocationParClient() {
+		rLocationParClient.afficherRapportLocationVoiture();
+	}
+	
 	@SuppressWarnings("unchecked")
 	public void afficheTableauClient( TableView<Client> clients, TableView<ClientRegulier> clientsReguliers) {
 		

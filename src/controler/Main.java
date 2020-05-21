@@ -65,7 +65,7 @@ public class Main extends Application {
 			    @Override 
 			    public void handle(MouseEvent event) {
 			        if (event.isPrimaryButtonDown() && event.getClickCount() == 2) {
-			            System.out.println(clients.getSelectionModel().getSelectedItem().getNom());                   
+			            mc.afficherLocationParClient();                  
 			        }
 			    }
 			});
