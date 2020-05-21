@@ -31,48 +31,27 @@ public class Main extends Application {
 			Group root = new Group();
 			
 			TableView<Client> clients = new TableView<Client>();
+			mc.afficheTableauClient(clients);
 			
-			TableColumn<Client, String> nomClient //
-            = new TableColumn<Client, String>("nom");
-
-			// Create column Email (Data type of String).
-			TableColumn<Client, String> adresseClient//
-            = new TableColumn<Client, String>("adresse");
-
-			// Create column FullName (Data type of String).
-			TableColumn<Client, String> telephoneClient//
-            = new TableColumn<Client, String>("telephone");
 			
-			TableColumn<Client, Integer> nbLocationClient//
-            = new TableColumn<Client, Integer>("nombre de location");
-
 			
-			nomClient.setCellValueFactory(new PropertyValueFactory<>("nom"));
-		    adresseClient.setCellValueFactory(new PropertyValueFactory<>("adresse"));
-		    telephoneClient.setCellValueFactory(new PropertyValueFactory<>("tel"));
-		    nbLocationClient.setCellValueFactory(new PropertyValueFactory<>("nombreDeLocation"));
+		    ObservableList<Client> list = mc.bd.listeClient(); 
 		    
-		    BD donneesBd = new BD();
-		    ObservableList<Client> list = donneesBd.listeClient(); 
-		    
-			clients.getColumns().addAll(nomClient,adresseClient,telephoneClient,nbLocationClient);
-			clients.setLayoutX(110);
-			clients.setPrefWidth(535);
-			clients.fixedCellSizeProperty();
+			
 			root.getChildren().add(clients);
 			
 			Button voirClients = new Button();
 			voirClients.setText("Voir les clients");
 			voirClients.setVisible(true);
 			voirClients.setPrefSize(20, 10);
-			voirClients.setPrefWidth(100);
+			voirClients.setPrefWidth(120);
 			voirClients.setPrefHeight(50);
 			
 			Button voirVoiture = new Button();
 			voirVoiture.setText("Voir les voitures");
 			voirVoiture.setVisible(true);
 			voirVoiture.setPrefSize(20, 10);
-			voirVoiture.setPrefWidth(100);
+			voirVoiture.setPrefWidth(120);
 			voirVoiture.setPrefHeight(50);
 			voirVoiture.setLayoutY(70);
 			
