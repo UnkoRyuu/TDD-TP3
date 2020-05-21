@@ -40,20 +40,20 @@ public class MainController{
 	}
 	public void afficheTableauClient( TableView<Client> clients) {
 		
-		
-		TableColumn<Client, String> nomClient //
+		/*  Clients  */
+		TableColumn<Client, String> nomClient
         = new TableColumn<Client, String>("nom");
 		nomClient.setPrefWidth(133);
 
-		// Create column Email (Data type of String).
-		TableColumn<Client, String> adresseClient//
+		TableColumn<Client, String> adresseClient
         = new TableColumn<Client, String>("adresse");
 		adresseClient.setPrefWidth(176);
-		// Create column FullName (Data type of String).
-		TableColumn<Client, String> telephoneClient//
+		
+		TableColumn<Client, String> telephoneClient
         = new TableColumn<Client, String>("telephone");
 		telephoneClient.setPrefWidth(133);
-		TableColumn<Client, Integer> nbLocationClient//
+		
+		TableColumn<Client, Integer> nbLocationClient
         = new TableColumn<Client, Integer>("locations");
 		nbLocationClient.setPrefWidth(80);
 		
@@ -63,6 +63,39 @@ public class MainController{
 	    nbLocationClient.setCellValueFactory(new PropertyValueFactory<>("nombreDeLocation"));
 	    
 	    clients.getColumns().addAll(nomClient,adresseClient,telephoneClient,nbLocationClient);
+		clients.setLayoutX(140);
+		clients.setPrefWidth(535);
+		clients.fixedCellSizeProperty();
+		
+		/*	Clients Reguliers	*/
+		
+		TableColumn<Client, String> nomClientRegulier
+        = new TableColumn<Client, String>("nom");
+		nomClientRegulier.setPrefWidth(133);
+
+		TableColumn<Client, String> adresseClientRegulier
+        = new TableColumn<Client, String>("adresse");
+		adresseClientRegulier.setPrefWidth(176);
+		
+		TableColumn<Client, String> telephoneClientRegulier
+        = new TableColumn<Client, String>("telephone");
+		telephoneClientRegulier.setPrefWidth(133);
+		
+		TableColumn<Client, Integer> nbLocationClientRegulier
+        = new TableColumn<Client, Integer>("locations");
+		nbLocationClientRegulier.setPrefWidth(80);
+		
+		TableColumn<Client, Integer> bonPts
+        = new TableColumn<Client, Integer>("locations");
+		nbLocationClientRegulier.setPrefWidth(80);
+		
+		nomClientRegulier.setCellValueFactory(new PropertyValueFactory<>("nom"));
+	    adresseClientRegulier.setCellValueFactory(new PropertyValueFactory<>("adresse"));
+	    telephoneClientRegulier.setCellValueFactory(new PropertyValueFactory<>("tel"));
+	    nbLocationClientRegulier.setCellValueFactory(new PropertyValueFactory<>("nombreDeLocation"));
+	    bonPts.setCellValueFactory(new PropertyValueFactory<>("bonPts"));
+	    
+	    clients.getColumns().addAll(nomClientRegulier,adresseClientRegulier,telephoneClientRegulier,nbLocationClientRegulier);
 		clients.setLayoutX(140);
 		clients.setPrefWidth(535);
 		clients.fixedCellSizeProperty();

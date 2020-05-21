@@ -41,23 +41,11 @@ public class Main extends Application {
 			root.getChildren().add(clients);
 			
 			Button voirClients = new Button();
-			voirClients.setText("Voir les clients");
-			voirClients.setVisible(true);
-			voirClients.setPrefSize(20, 10);
-			voirClients.setPrefWidth(120);
-			voirClients.setPrefHeight(50);
-			
-			Button voirVoiture = new Button();
-			voirVoiture.setText("Voir les voitures");
-			voirVoiture.setVisible(true);
-			voirVoiture.setPrefSize(20, 10);
-			voirVoiture.setPrefWidth(120);
-			voirVoiture.setPrefHeight(50);
-			voirVoiture.setLayoutY(70);
-			
+			Button voirVoitures = new Button();
+			mc.afficherBoutons(voirClients, voirVoitures);
 			
 			root.getChildren().add(voirClients);
-			root.getChildren().add(voirVoiture);
+			root.getChildren().add(voirVoitures);
 						
 			voirClients.setOnAction(new EventHandler<ActionEvent>() {
 				
@@ -69,7 +57,7 @@ public class Main extends Application {
 				}
 			});
 			
-			voirVoiture.setOnAction(new EventHandler<ActionEvent>() {
+			voirVoitures.setOnAction(new EventHandler<ActionEvent>() {
 				
 				@Override
 				public void handle(ActionEvent arg0) {
