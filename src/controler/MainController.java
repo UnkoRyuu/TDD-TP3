@@ -6,6 +6,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import modele.Client;
+import modele.ClientRegulier;
 import vue.RapportVoiture;
 import vue.RapportClient;
 import vue.RapportLocationParClient;
@@ -38,7 +39,7 @@ public class MainController{
 		rVoiture.affichageRapportVoiture();
 		System.out.println("coucou c'est moi");
 	}
-	public void afficheTableauClient( TableView<Client> clients) {
+	public void afficheTableauClient( TableView<Client> clients, TableView<ClientRegulier> clientsReguliers) {
 		
 		/*  Clients  */
 		TableColumn<Client, String> nomClient
@@ -69,36 +70,35 @@ public class MainController{
 		
 		/*	Clients Reguliers	*/
 		
-		TableColumn<Client, String> nomClientRegulier
-        = new TableColumn<Client, String>("nom");
+		TableColumn<ClientRegulier, String> nomClientRegulier
+        = new TableColumn<ClientRegulier, String>("nom");
 		nomClientRegulier.setPrefWidth(133);
 
-		TableColumn<Client, String> adresseClientRegulier
-        = new TableColumn<Client, String>("adresse");
+		TableColumn<ClientRegulier, String> adresseClientRegulier
+        = new TableColumn<ClientRegulier, String>("adresse");
 		adresseClientRegulier.setPrefWidth(176);
 		
-		TableColumn<Client, String> telephoneClientRegulier
-        = new TableColumn<Client, String>("telephone");
+		TableColumn<ClientRegulier, String> telephoneClientRegulier
+        = new TableColumn<ClientRegulier, String>("telephone");
 		telephoneClientRegulier.setPrefWidth(133);
 		
-		TableColumn<Client, Integer> nbLocationClientRegulier
-        = new TableColumn<Client, Integer>("locations");
+		TableColumn<ClientRegulier, Integer> nbLocationClientRegulier
+        = new TableColumn<ClientRegulier, Integer>("locations");
 		nbLocationClientRegulier.setPrefWidth(80);
 		
-		TableColumn<Client, Integer> bonPts
-        = new TableColumn<Client, Integer>("locations");
+		TableColumn<ClientRegulier, Integer> bonPts
+        = new TableColumn<ClientRegulier, Integer>("bons points");
 		nbLocationClientRegulier.setPrefWidth(80);
 		
 		nomClientRegulier.setCellValueFactory(new PropertyValueFactory<>("nom"));
 	    adresseClientRegulier.setCellValueFactory(new PropertyValueFactory<>("adresse"));
 	    telephoneClientRegulier.setCellValueFactory(new PropertyValueFactory<>("tel"));
 	    nbLocationClientRegulier.setCellValueFactory(new PropertyValueFactory<>("nombreDeLocation"));
-	    bonPts.setCellValueFactory(new PropertyValueFactory<>("bonPts"));
-	    
-	    clients.getColumns().addAll(nomClientRegulier,adresseClientRegulier,telephoneClientRegulier,nbLocationClientRegulier);
-		clients.setLayoutX(140);
-		clients.setPrefWidth(535);
-		clients.fixedCellSizeProperty();
+	    bonPts.setCellValueFactory(new PropertyValueFactory<>("pointsBonClient"));
+	    clientsReguliers.getColumns().addAll(nomClientRegulier,adresseClientRegulier,telephoneClientRegulier,nbLocationClientRegulier,bonPts);
+		clientsReguliers.setLayoutX(740);
+		clientsReguliers.setPrefWidth(610);
+		clientsReguliers.fixedCellSizeProperty();
 		
 	}
 	

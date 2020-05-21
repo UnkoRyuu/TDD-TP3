@@ -124,4 +124,10 @@ public class BD {
 			ObservableList<Client> listcli =FXCollections.observableArrayList(arrLstClient); 
 			return listcli; 
 	 }
+	 
+	 public ObservableList<ClientRegulier> listeClientsReguliers() {
+			
+			ObservableList<ClientRegulier> listcli =FXCollections.observableArrayList(arrLstClientRegulier); 
+			return listcli; 
+	 }
 }

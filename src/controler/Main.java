@@ -2,6 +2,8 @@ package controler;
 	
 
 
+import java.awt.Label;
+
 import donnees.BD;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -12,6 +14,7 @@ import javafx.geometry.Insets;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import modele.Client;
+import modele.ClientRegulier;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -31,14 +34,21 @@ public class Main extends Application {
 			Group root = new Group();
 			
 			TableView<Client> clients = new TableView<Client>();
-			mc.afficheTableauClient(clients);
+			Label titreTableauClients = new Label("couc");
+			titreTableauClients.setLocation(250, 440);
+
+			TableView<ClientRegulier> clientsRegulier = new TableView<ClientRegulier>();
+			mc.afficheTableauClient(clients,clientsRegulier);
 			
 			
 			
-		    ObservableList<Client> list = mc.bd.listeClient(); 
+		    ObservableList<Client> listeClients = mc.bd.listeClient(); 
+		    ObservableList<ClientRegulier> listeClientsReguliers = mc.bd.listeClientsReguliers();
 		    
 			
 			root.getChildren().add(clients);
+			root.getChildren().add(clientsRegulier);
+			
 			
 			Button voirClients = new Button();
 			Button voirVoitures = new Button();
@@ -52,8 +62,8 @@ public class Main extends Application {
 				@Override
 				public void handle(ActionEvent arg0) {
 					
-				    clients.setItems(list);
-				    
+				    clients.setItems(listeClients);
+				    clientsRegulier.setItems(listeClientsReguliers);
 				}
 			});
 			
@@ -66,7 +76,7 @@ public class Main extends Application {
 				}
 			});
 			
-			Scene scene = new Scene(root,700,400);
+			Scene scene = new Scene(root,1400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
