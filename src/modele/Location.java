@@ -14,11 +14,11 @@ public class Location {
 	private Voiture voiture;
 	private PeriodeLocation pL;
 	
-	public Location(Client client) {
+	public Location(Client client, ClientRegulier clientRegulier, Voiture voiture, PeriodeLocation pL) {
 		this.client = client;
-		this.clientRegulier = null;
-		this.voiture = null;
-		this.setpL(null);
+		this.clientRegulier = clientRegulier;
+		this.voiture = voiture;
+		this.pL = pL;
 	}
 	
 	public Client getClient() {
