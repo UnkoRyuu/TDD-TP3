@@ -1,6 +1,8 @@
 package controler;
 
 import donnees.BD;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -39,6 +41,7 @@ public class MainController{
 		rVoiture.affichageRapportVoiture();
 		System.out.println("coucou c'est moi");
 	}
+	@SuppressWarnings("unchecked")
 	public void afficheTableauClient( TableView<Client> clients, TableView<ClientRegulier> clientsReguliers) {
 		
 		/*  Clients  */
@@ -117,6 +120,18 @@ public class MainController{
 		voirVoitures.setLayoutY(70);
 		
 	}
+	
+	 public ObservableList<Client> listeClient() {
+			
+			ObservableList<Client> listcli =FXCollections.observableArrayList(bd.arrLstClient); 
+			return listcli; 
+	 }
+	 
+	 public ObservableList<ClientRegulier> listeClientsReguliers() {
+			
+			ObservableList<ClientRegulier> listcli =FXCollections.observableArrayList(bd.arrLstClientRegulier); 
+			return listcli; 
+	 }
 }
 
 		

@@ -102,32 +102,7 @@ public class BD {
 		l2.setpL(pl2);
 		this.arrLstLocation.add(l2);
 	}
-	 public void listedesclients() {
-		 Client c1 = new Client("Mélanie Charron","581-555-8823","12, rue des Fauvettes, Rimouski",0);
-			c1.nom = "Mélanie Charron";
-			c1.adresse = "12, rue des Fauvettes, Rimouski";
-			c1.tel = "581-555-8823";
-			this.arrLstClient.add(c1);
-			
-			Client c2 = new Client("François Beauchemin","581-555-7525","50, rue des Oliviers, Rimouski",3);
-			c2.nom = "François Beauchemin";
-			c2.adresse = "50, rue des Oliviers, Rimouski";
-			c2.tel = "581-555-7525";
-			this.arrLstClient.add(c2);
-			
-			
-	 }
+	 	
+	 
 	
-	 
-	 public ObservableList<Client> listeClient() {
-			
-			ObservableList<Client> listcli =FXCollections.observableArrayList(arrLstClient); 
-			return listcli; 
-	 }
-	 
-	 public ObservableList<ClientRegulier> listeClientsReguliers() {
-			
-			ObservableList<ClientRegulier> listcli =FXCollections.observableArrayList(arrLstClientRegulier); 
-			return listcli; 
-	 }
 }

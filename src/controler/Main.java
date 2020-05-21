@@ -4,26 +4,17 @@ package controler;
 
 import java.awt.Label;
 
-import donnees.BD;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
-import javafx.stage.Stage;
-import javafx.util.Callback;
-import modele.Client;
-import modele.ClientRegulier;
 import javafx.scene.Group;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TableView.ResizeFeatures;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import modele.Client;
+import modele.ClientRegulier;
 
 
 public class Main extends Application {
@@ -34,22 +25,15 @@ public class Main extends Application {
 			Group root = new Group();
 			
 			TableView<Client> clients = new TableView<Client>();
-			Label titreTableauClients = new Label("couc");
-			titreTableauClients.setLocation(250, 440);
-
 			TableView<ClientRegulier> clientsRegulier = new TableView<ClientRegulier>();
 			mc.afficheTableauClient(clients,clientsRegulier);
-			
-			
-			
-		    ObservableList<Client> listeClients = mc.bd.listeClient(); 
-		    ObservableList<ClientRegulier> listeClientsReguliers = mc.bd.listeClientsReguliers();
+						
+		    ObservableList<Client> listeClients = mc.listeClient(); 
+		    ObservableList<ClientRegulier> listeClientsReguliers = mc.listeClientsReguliers();
 		    
-			
 			root.getChildren().add(clients);
 			root.getChildren().add(clientsRegulier);
-			
-			
+						
 			Button voirClients = new Button();
 			Button voirVoitures = new Button();
 			mc.afficherBoutons(voirClients, voirVoitures);
