@@ -6,10 +6,10 @@ public class Voiture {
 	private String annee;
 	private String modele;
 	
-	public Voiture(String marque, String annee, String modele) {
+	public Voiture(String marque, String modele, String annee) {
 		this.marque= marque;
-		this.annee = annee;
 		this.modele = modele;
+		this.annee = annee;
 	}
 
 	public String getModele() {

@@ -1,6 +1,7 @@
 package vue;
 
 import java.util.ArrayList;
+
 import modele.Location;
 import donnees.BD;
 
