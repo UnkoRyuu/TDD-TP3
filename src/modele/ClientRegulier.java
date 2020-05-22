@@ -8,15 +8,9 @@ package modele;
  */
 public class ClientRegulier extends Client {
 	
-	public String nom;
-	public String tel;
-	public String adresse;
-	public int nombreDeLocation;
-	public int pointsBonClient;
+	private int nombreDeLocation;
+	private int pointsBonClient;
 
-	/*public ClientRegulier() {
-		
-	}*/
 	public ClientRegulier(String nom, String tel, String adresse, int nblocation, int pointsBonClient) {
 		super(nom, tel, adresse,nblocation);
 		this.pointsBonClient = pointsBonClient;
@@ -33,5 +27,15 @@ public class ClientRegulier extends Client {
 
 	public void addPoints(int value) {
 		this.pointsBonClient += value;
+	}
+	
+	public int getGoodPointsForRegularCustomer() {
+		int points = 1;
+		if (this.nombreDeLocation > 15 && this.nombreDeLocation < 45 ) {
+			points = 2;
+		} else if (this.nombreDeLocation >= 75) {
+			points = 3;
+		}
+		return points;
 	}
 }

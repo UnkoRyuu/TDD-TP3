@@ -1,13 +1,5 @@
 package vue;
 import donnees.BD;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.FlowPane;
-import modele.Client;
 /**
  * 
  * Rapport de la liste des clients.
@@ -19,13 +11,12 @@ public class RapportClient {
 	public RapportClient() {
 	}
 	
-	public void affichageRapportConsole() {
-		BD bd = new BD();
+	public void affichageRapportConsole(BD bd) {
 		int i;
 		String listeClients="", client=""; 
 		for (i=0;i<bd.arrLstClient.size();i++) {
 			
-			client = bd.arrLstClient.get(i).nom + " | nb location : " + bd.arrLstClient.get(i).getNombreDeLocation();
+			client = bd.arrLstClient.get(i).getNom() + " | nb location : " + bd.arrLstClient.get(i).getNombreDeLocation();
 			client += " | adresse : " + bd.arrLstClient.get(i).getAdresse();
 			client += " | telephone : " + bd.arrLstClient.get(i).getTel();	
 			listeClients += client + "\n";
@@ -33,18 +24,13 @@ public class RapportClient {
 		
 		for (i=0;i<bd.arrLstClientRegulier.size();i++) {
 			
-			client = bd.arrLstClientRegulier.get(i).nom + " | nb location : " + bd.arrLstClientRegulier.get(i).getNombreDeLocation();
+			client = bd.arrLstClientRegulier.get(i).getNom() + " | nb location : " + bd.arrLstClientRegulier.get(i).getNombreDeLocation();
 			client += " | adresse : " + bd.arrLstClientRegulier.get(i).getAdresse();
 			client += " | telephone : " + bd.arrLstClientRegulier.get(i).getTel();
 			client += " | bons points : " + bd.arrLstClientRegulier.get(i).getPointsBonClient();
 			listeClients += client + "\n";
 		}	
 		System.out.println("Rapport des clients :\n" + listeClients);
-	}
-	@FXML
-	public void affichageRapportClientFXML() {
-		
-		
 	}
 }
 

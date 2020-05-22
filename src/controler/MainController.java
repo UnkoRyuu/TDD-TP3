@@ -1,5 +1,7 @@
 package controler;
 
+import java.util.ArrayList;
+
 import donnees.BD;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,6 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import modele.Client;
 import modele.ClientRegulier;
+import modele.Location;
 import vue.RapportVoiture;
 import vue.RapportClient;
 import vue.RapportLocationParClient;
@@ -32,8 +35,7 @@ public class MainController{
 		rLocationParClient = new RapportLocationParClient();
 		}
 	public void affichageClients() {
-		rClient.affichageRapportClientFXML();
-		rClient.affichageRapportConsole();
+		rClient.affichageRapportConsole(bd);
 		
 	}
 	
@@ -41,8 +43,16 @@ public class MainController{
 		rVoiture.affichageRapportVoiture();
 	}
 	
-	public void afficherLocationParClient() {
-		rLocationParClient.afficherRapportLocationVoiture();
+	public void afficherLocationParClient(String nomclient) {
+		ArrayList<Location> locationParClient = new ArrayList<Location>();
+		int i ;
+		for(i=0;i<bd.arrLstLocation.size();i++) {
+			if(bd.arrLstLocation.get(i).getClient().getNom()==nomclient) {
+
+			locationParClient.add(bd.arrLstLocation.get(i));
+			}
+		}
+		rLocationParClient.afficherRapportLocationVoitureParClient(locationParClient);
 	}
 	
 	@SuppressWarnings("unchecked")

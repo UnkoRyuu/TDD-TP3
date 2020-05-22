@@ -1,8 +1,4 @@
 package controler;
-	
-
-
-import java.awt.Label;
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -65,11 +61,20 @@ public class Main extends Application {
 			    @Override 
 			    public void handle(MouseEvent event) {
 			        if (event.isPrimaryButtonDown() && event.getClickCount() == 2) {
-			            mc.afficherLocationParClient();                  
+			            mc.afficherLocationParClient(clients.getSelectionModel().getSelectedItem().getNom());                  
 			        }
 			    }
 			});
-				
+			
+			clientsRegulier.setOnMousePressed(new EventHandler<MouseEvent>() {
+			    @Override 
+			    public void handle(MouseEvent event) {
+			        if (event.isPrimaryButtonDown() && event.getClickCount() == 2) {
+			            mc.afficherLocationParClient(clientsRegulier.getSelectionModel().getSelectedItem().getNom());                  
+			        }
+			    }
+			});
+	
 			
 			Scene scene = new Scene(root,1400,400);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());

@@ -9,7 +9,10 @@ import donnees.BD;
 public class RapportVoiture {
 	
 	public RapportVoiture() {
-		
+			
+	}
+	
+	public void affichageRapportVoiture() {
 		int i;
 		BD bd = new BD();
 		String voiture=""; 
@@ -17,17 +20,14 @@ public class RapportVoiture {
 		
 		for (i=0; i<bd.arrLstVoiture.size(); i++) {
 			
-			voiture = " Modele : " + bd.arrLstVoiture.get(i).getModele();
-			voiture += "| Marque : " + bd.arrLstVoiture.get(i).getMarque();
-			voiture += "| Annee : " + bd.arrLstVoiture.get(i).getAnnee();	
+			voiture = "Marque : " + bd.arrLstVoiture.get(i).getMarque();
+			voiture +="\t Modele : " + bd.arrLstVoiture.get(i).getModele(); 
+			voiture += "\t Annee : " + bd.arrLstVoiture.get(i).getAnnee();	
 			listeVoitures += voiture + "\n";
 		}	
-		System.out.println("Rapport voitures : \n " + listeVoitures);
+		System.out.println("Rapport voitures : \n" + listeVoitures);
 	
-	}
 	
-	public void affichageRapportVoiture() {
-		System.out.println("Liste voitures ok ");
 	}
 } 
 

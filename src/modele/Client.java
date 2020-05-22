@@ -2,10 +2,10 @@ package modele;
 
 public class Client {
 	
-	public String nom;
-	public String tel;
-	public String adresse;
-	public int nombreDeLocation;
+	private String nom;
+	private String tel;
+	private String adresse;
+	private int nombreDeLocation;
 	
 	public Client(String nom, String tel, String adresse, int nblocation) {
 		this.nom = nom;
